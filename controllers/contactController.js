@@ -21,7 +21,7 @@ export const sendContactForm = async (req, res) => {
 
   try {
     await transporter.sendMail({
-      from: `"PIE Contact" <${process.env.EMAIL_USER}>`,
+      from: process.env.EMAIL_USER,
       to: "aravindbvadavalliki@gmail.com",
       subject: "New Contact Form Submission",
       html: `
